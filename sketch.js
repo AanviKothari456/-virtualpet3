@@ -15,12 +15,12 @@ var currentTime;
 function preload()
 {
   //load images here
-  dogI = loadImage("images/dog.png");
-  happyD = loadImage("images/dogHappy.png"); 
-  gar = loadImage("images/garden.jpg");
-  Gar = loadImage("images/Garden.png");
-  bed = loadImage("images/Bed Room.png")
-  wash = loadImage("images/Wash Room.png")
+  dogI = loadImage("dog.png");
+  happyD = loadImage("dogHappy.png"); 
+  gar = loadImage("garden.jpg");
+  Gar = loadImage("Garden.png");
+  bed = loadImage("Bed Room.png")
+  wash = loadImage("Wash Room.png")
 }
 
 function setup() {
