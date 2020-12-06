@@ -15,12 +15,12 @@ var currentTime;
 function preload()
 {
   //load images here
-  dogI = loadImage("dog.png");
-  happyD = loadImage("dogHappy.png"); 
-  gar = loadImage("garden.jpg");
-  Gar = loadImage("Garden.png");
-  bed = loadImage("Bed Room.png")
-  wash = loadImage("Wash Room.png")
+  dogI = loadImage("images/dog.png");
+  happyD = loadImage("images/dogHappy.png"); 
+  gar = loadImage("images/garden.jpg");
+  Gar = loadImage("images/Garden.png");
+  bed = loadImage("images/Bed Room.png")
+  wash = loadImage("images/Wash Room.png")
 }
 
 function setup() {
@@ -80,19 +80,20 @@ else if(currentTime>(lastFed+2) && currentTime<=(lastFed+4))
   update("Bathing");
   foodObj.washroom();
 }
-else
+else 
 {
   update("Hungry");
   foodObj.display();
 }
 
-       if(gameState!="hungry")
+       if(gameState!="Hungry")
        {
-         //feed.hide();
-        // add.hide();
-        // dog.remove();
+         feed.hide();
+        add.hide();
+         dog.remove();
        }
-       else{
+       else if(gameState == "Hungry"){
+         console.log(feed.position);
          feed.show();
          add.show();
          dog.addImage(dogI);
